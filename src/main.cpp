@@ -1,9 +1,13 @@
+#include "hashing.hpp"
+
 #include <fmt/format.h>
 #include <jinja2cpp/template.h>
 #include <sstream>
 #include <fstream>
 #include <httplib.h>
 #include <filesystem>
+
+
 
 std::string get_html_template(std::filesystem::path const & target_file){
     if(std::filesystem::exists(target_file)){
@@ -25,6 +29,7 @@ std::string dynamic_body(){
 
 int main() {
 
+    std::cout << "asdfsadfsadf:" << wst::sha256("fox") << '\n';
     // the routing server.
     httplib::Server svr;
 
